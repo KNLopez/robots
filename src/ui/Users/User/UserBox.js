@@ -38,6 +38,13 @@ export default styled.div`
   .editButton {
     background: #8e54e9;
   }
+
+  .backButton {
+    width: 80%;
+    background: #b2bec3;
+    margin: 0 auto;
+    display: block;
+  }
 `;
 
 export const UserBox = styled.div`

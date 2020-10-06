@@ -65,6 +65,11 @@ const User = ({ user, handleClose }) => {
           </button>
         </>
       )}
+      {editMode && (
+        <button className="backButton" onClick={() => setEditMode(!editMode)}>
+          Back
+        </button>
+      )}
     </Box>
   );
 };
