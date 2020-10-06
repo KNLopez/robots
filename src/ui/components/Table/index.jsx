@@ -5,20 +5,6 @@ import Input from "../Input";
 import { ReactComponent as AddIcon } from "./plus.svg";
 
 const Table = ({ headers, children, handleChange, handleAddRow }) => {
-  const renderBody = () => <div className="tableBody">{children}</div>;
-
-  const tableHeader = () => (
-    <div className="tableHeader">
-      {headers.map((header) => (
-        <div key={header}>{header}</div>
-      ))}
-    </div>
-  );
-
-  const handleTextChange = (e) => {
-    handleChange(e.target.value);
-  };
-
   const tableControls = () => (
     <div className="tableControls">
       {handleChange && (
@@ -34,6 +20,19 @@ const Table = ({ headers, children, handleChange, handleAddRow }) => {
       </button>
     </div>
   );
+
+  const tableHeader = () => (
+    <div className="tableHeader">
+      {headers.map((header) => (
+        <div key={header}>{header}</div>
+      ))}
+    </div>
+  );
+  const renderBody = () => <div className="tableBody">{children}</div>;
+
+  const handleTextChange = (e) => {
+    handleChange(e.target.value);
+  };
 
   return (
     <Box clickable={Boolean(handleChange)}>

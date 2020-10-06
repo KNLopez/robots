@@ -38,6 +38,16 @@ const Users = ({ userList }) => {
     setAddUser(false);
   };
 
+  const handleAddrow = () => {
+    setAddUser(true);
+    setUser(null);
+  };
+
+  const handeClosePortals = () => {
+    setAddUser(false);
+    setUser(null);
+  };
+
   const renderUsers = users.map((user) => (
     <div
       className="tableRow"
@@ -58,16 +68,6 @@ const Users = ({ userList }) => {
       <div>{user.website}</div>
     </div>
   ));
-
-  const handleAddrow = () => {
-    setAddUser(true);
-    setUser(null);
-  };
-
-  const handeClosePortals = () => {
-    setAddUser(false);
-    setUser(null);
-  };
 
   return (
     <>

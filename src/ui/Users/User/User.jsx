@@ -30,6 +30,9 @@ const User = ({ user, handleClose }) => {
         </div>
         <div>{currentUser.phone}</div>
         <div>{currentUser.website}</div>
+        <button className="close" onClick={handleClose}>
+          x
+        </button>
       </UserBox>
     );
   };
@@ -47,16 +50,15 @@ const User = ({ user, handleClose }) => {
   return (
     <Box>
       {editMode ? (
-        <Form handleClose={handleClose} user={user} />
-      ) : (
-        userRenderer()
-      )}
-      {!editMode && (
         <>
-          <button className="close" onClick={handleClose}>
-            x
+          <Form handleClose={handleClose} user={user} />
+          <button className="backButton" onClick={() => setEditMode(!editMode)}>
+            Back
           </button>
-
+        </>
+      ) : (
+        <>
+          {userRenderer()}
           <button className="editButton" onClick={() => setEditMode(!editMode)}>
             Edit
           </button>
@@ -64,11 +66,6 @@ const User = ({ user, handleClose }) => {
             Delete
           </button>
         </>
-      )}
-      {editMode && (
-        <button className="backButton" onClick={() => setEditMode(!editMode)}>
-          Back
-        </button>
       )}
     </Box>
   );

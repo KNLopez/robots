@@ -25,10 +25,12 @@ const Form = ({ user, handleClose }) => {
     if (user) {
       payload.id = user;
       dispatch(updateUser(user, payload));
+      alert(`User ${currentUser.name} updated`);
     } else {
       dispatch(createUser(payload));
+      alert(`User ${payload.name} created`);
     }
-    alert(`User ${currentUser.name} updated`);
+
     handleClose();
   };
 
