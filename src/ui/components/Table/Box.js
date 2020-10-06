@@ -57,6 +57,19 @@ const Box = styled.div`
         outline: 2px solid #a29bfe;
       }
     }
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      button {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        justify-content: center;
+        height: 48px;
+      }
+      input {
+        width: 100%;
+      }
+    }
   }
 
   .tableHeader {
@@ -96,17 +109,28 @@ const Box = styled.div`
         background: #a29bfe;
         color: white;
       }
+      @media only screen and (max-width: 600px) {
+        margin-bottom: 16px;
+      }
 
       > div {
         padding: 10px 20px;
         flex: 1;
         display: flex;
         align-items: center;
+        @media only screen and (max-width: 600px) {
+          flex-direction: column;
+        }
+
         img {
           max-width: 60px;
           background: #74b9ff;
           border-radius: 60px;
           margin-right: 20px;
+          @media only screen and (max-width: 600px) {
+            margin: 0;
+            margin-bottom: 20px;
+          }
         }
       }
       @media only screen and (max-width: 600px) {

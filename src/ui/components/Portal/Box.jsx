@@ -18,6 +18,10 @@ export default styled.div`
   animation-fill-mode: both;
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
   * {
     font-family: "Poppins", sans-serif;
   }
