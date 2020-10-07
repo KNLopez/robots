@@ -1,5 +1,6 @@
 ## READ ME
 
-To install locally, clone repository and run yarn, or npm install.
+To install locally, clone repository and run yarn, or npm install. \
+view demo  https://knlopez.github.io/robots/
 
-### `run yarn start to start application`
+#### `yarn start to start application`
