@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../../state/selectors";
 import { createUser, updateUser } from "../../../state/actions";
 import FormBox from "./FormBox";
-import Button from "../../components/Button";
-import CloseButton from "../../components/CloseButton";
+import Button from "../../components/Buttons/Button";
+import CloseButton from "../../components/Buttons/CloseButton";
 
 const Form = ({ user, handleClose }) => {
   const currentUser = useSelector((state) => getUser(state, user)) || {};

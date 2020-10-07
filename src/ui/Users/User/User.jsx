@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../../state/selectors";
 import Box, { UserBox } from "./UserBox";
 import { deleteUser } from "../../../state/actions";
-import Button from "../../components/Button";
-import CloseButton from "../../components/CloseButton";
+import Button from "../../components/Buttons/Button";
+import CloseButton from "../../components/Buttons/CloseButton";
 
 const User = ({ user, handleClose }) => {
   const [editMode, setEditMode] = useState();

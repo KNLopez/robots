@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import Button from "./Button";
+import { ReactComponent as CloseIcon } from "./close.svg";
 
 const StyledButton = styled(Button)`
   height: 30px;
@@ -25,7 +26,11 @@ const StyledButton = styled(Button)`
 `;
 
 const CloseButton = ({ children, ...props }) => {
-  return <StyledButton {...props}>x</StyledButton>;
+  return (
+    <StyledButton {...props}>
+      <CloseIcon />
+    </StyledButton>
+  );
 };
 
 CloseButton.propTypes = {

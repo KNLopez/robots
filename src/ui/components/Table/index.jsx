@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Box from "./Box";
 import Input from "../Input";
 import { ReactComponent as AddIcon } from "./plus.svg";
-import Button from "../Button";
+import Button from "../Buttons/Button";
 
 const Table = ({ headers, children, handleChange, handleAddRow }) => {
   const tableControls = () => (
