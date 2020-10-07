@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Box from "./Box";
 import Input from "../Input";
 import { ReactComponent as AddIcon } from "./plus.svg";
+import Button from "../Button";
 
 const Table = ({ headers, children, handleChange, handleAddRow }) => {
   const tableControls = () => (
@@ -14,10 +15,10 @@ const Table = ({ headers, children, handleChange, handleAddRow }) => {
           placeholder="Search Table"
         />
       )}
-      <button onClick={handleAddRow}>
+      <Button onClick={handleAddRow}>
         <AddIcon />
         Add User
-      </button>
+      </Button>
     </div>
   );
 

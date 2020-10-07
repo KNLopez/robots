@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../../state/selectors";
 import Box, { UserBox } from "./UserBox";
 import { deleteUser } from "../../../state/actions";
+import Button from "../../components/Button";
+import CloseButton from "../../components/CloseButton";
 
 const User = ({ user, handleClose }) => {
   const [editMode, setEditMode] = useState();
@@ -30,9 +32,7 @@ const User = ({ user, handleClose }) => {
         </div>
         <div>{currentUser.phone}</div>
         <div>{currentUser.website}</div>
-        <button className="close" onClick={handleClose}>
-          x
-        </button>
+        <CloseButton className="close" onClick={handleClose} />
       </UserBox>
     );
   };
@@ -52,19 +52,27 @@ const User = ({ user, handleClose }) => {
       {editMode ? (
         <>
           <Form handleClose={handleClose} user={user} />
-          <button className="backButton" onClick={() => setEditMode(!editMode)}>
+          <Button
+            className="backButton"
+            fullWidth
+            onClick={() => setEditMode(!editMode)}
+          >
             Back
-          </button>
+          </Button>
         </>
       ) : (
         <>
           {userRenderer()}
-          <button className="editButton" onClick={() => setEditMode(!editMode)}>
+          <Button
+            className="editButton"
+            fullWidth
+            onClick={() => setEditMode(!editMode)}
+          >
             Edit
-          </button>
-          <button className="deleteButton" onClick={handleDelete}>
+          </Button>
+          <Button className="deleteButton" fullWidth onClick={handleDelete}>
             Delete
-          </button>
+          </Button>
         </>
       )}
     </Box>

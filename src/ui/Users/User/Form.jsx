@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../../state/selectors";
 import { createUser, updateUser } from "../../../state/actions";
 import FormBox from "./FormBox";
+import Button from "../../components/Button";
+import CloseButton from "../../components/CloseButton";
 
 const Form = ({ user, handleClose }) => {
   const currentUser = useSelector((state) => getUser(state, user)) || {};
@@ -36,9 +38,8 @@ const Form = ({ user, handleClose }) => {
 
   return (
     <FormBox>
-      <button className="close" onClick={handleClose}>
-        x
-      </button>
+      <CloseButton className="close" onClick={handleClose} />
+
       {currentUser.id ? <h2>Edit User</h2> : <h2>Add User</h2>}
       <form onSubmit={handleSubmit}>
         <Input
@@ -81,7 +82,7 @@ const Form = ({ user, handleClose }) => {
           name="website"
           defaultValue={currentUser.website || undefined}
         />
-        <button>Submit</button>
+        <Button fullWidth>Submit</Button>
       </form>
     </FormBox>
   );

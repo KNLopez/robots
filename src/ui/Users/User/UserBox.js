@@ -1,36 +1,9 @@
 import styled from "@emotion/styled";
 
 export default styled.div`
-  .close {
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    color: #000;
-    right: 0;
-    top: 0;
-    border: none;
-    background: none;
-    font-size: 30px;
-    font-weight: 800;
-    cursor: pointer;
-    line-height: 0;
-    transition: transform 0.2s ease-in-out;
-    &:hover {
-      transform: rotate(180deg);
-    }
-    padding: 0;
-  }
   button {
     margin-bottom: 16px;
-    width: 100%;
-    color: #fff;
-    padding: 8px 24px;
-    border: 0;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 6px;
   }
-
   .deleteButton {
     background: #eb4d4b;
   }
